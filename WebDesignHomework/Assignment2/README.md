@@ -1,1 +1,1 @@
-This is the README.md for Assignment 2.
+This is the README for Assignment 2.
