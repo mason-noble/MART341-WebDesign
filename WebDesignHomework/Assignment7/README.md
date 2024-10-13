@@ -1,0 +1,1 @@
+I am still very proud of the styling, specifically for the header, footer, buttons and boxes. I know that I may have to change it sometime soon, but for a first pass at a website, I enjoy it very much. Speaking of buttons, I love what I did for the buttons to navigate between different pages, though I'm unsure if I'm going to keep it like that, or utilize a navbar later on.
