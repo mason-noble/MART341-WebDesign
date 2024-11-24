@@ -1,0 +1,257 @@
+/* styles.css */
+
+/* Import external font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Self-hosted font */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #e6f2e6;
+    font-family: 'Roboto', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #2f4f2f;
+    color: #f4f4f9;
+    padding: 20px 0;
+    font-family: 'OpenSans', sans-serif;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #3b6b3b;
+    border-radius: 5px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 20px;
+    color: #f4f4f9;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'OpenSans', sans-serif;
+}
+
+.navbar a:hover {
+    background-color: #497949;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #f4f4f9;
+    font-weight: bold;
+}
+
+h2, h3 {
+    color: #2f4f2f;
+    font-family: 'OpenSans', sans-serif;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    border: 1px solid #c2d1c2;
+    padding: 15px;
+}
+
+img {
+    margin: 10px;
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #c2d1c2;
+    overflow: hidden;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px;
+    padding: 10px;
+    background-color: #d9e6d9;
+    border-left: 5px solid #2f4f2f;
+    font-family: 'OpenSans', sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2f4f2f;
+    color: #f4f4f9;
+    font-family: 'OpenSans', sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #c2d1c2;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e6f2e6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'OpenSans', sans-serif;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #c2d1c2;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'OpenSans', sans-serif;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #2f4f2f;
+    color: #f4f4f9;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #497949;
+}
+
+.button {
+    background-color: #2f4f2f;
+    color: #f4f4f9;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #497949;
+}
+
+/* Additional styling techniques */
+a {
+    text-decoration: underline;
+    color: #2f4f2f;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #497949;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 2em;
+    color: #2f4f2f;
+    vertical-align: middle;
+}
+
+blockquote::after {
+    content: "\201D";
+    font-size: 2em;
+    color: #2f4f2f;
+    vertical-align: middle;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3b6b3b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #497949;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #497949;
+}
