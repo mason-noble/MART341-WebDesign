@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundWave Audio - Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #myCanvas {
+      border: 1px solid black;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="index.html">SoundWave Audio</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1>Welcome to SoundWave Audio</h1>
+    <p>Explore the next level of sound quality and comfort with our cutting-edge wireless headphones. Perfect for every lifestyle!</p>
+    
+    <!-- Product Image and Description -->
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://m.media-amazon.com/images/I/81S-9DCV0JL._AC_SL1500_.jpg" class="img-fluid" alt="Wireless Headphones">
+      </div>
+      <div class="col-md-6">
+        <h3>Key Features</h3>
+        <ul>
+          <li>High-definition sound quality</li>
+          <li>Noise-cancelling technology</li>
+          <li>Long-lasting battery (up to 30 hours)</li>
+          <li>Ergonomic design for ultimate comfort</li>
+          <li>Bluetooth 5.0 connectivity</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Buy Now</a>
+      </div>
+    </div>
+    
+    <h3>Customer Reviews</h3>
+    <p>★★★★★ - "The best headphones I've ever owned! The sound quality is amazing." - Alex</p>
+    <p>★★★★☆ - "Great battery life, but they could be a little more comfortable." - Jordan</p>
+    
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+  </div>
+
+
+  <script>
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+
+      function drawHeadphones() {
+          ctx.fillStyle = '#000';
+          ctx.beginPath();
+          // Adjust the Y position of the earcups so they're not too far down
+          ctx.arc(140, 180, 40, 0, Math.PI * 2, true); // Left earcup
+          ctx.arc(260, 180, 40, 0, Math.PI * 2, true); // Right earcup
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.moveTo(100, 180); // Adjust the starting position of the headband
+          // Adjust the bezier curve to fit the new earcup position
+          ctx.bezierCurveTo(150, 20, 250, 20, 300, 180); // Smoother headband
+          ctx.lineWidth = 8;
+          ctx.strokeStyle = '#000';
+          ctx.stroke();
+      }
+
+      function drawSoundWaves() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          drawHeadphones();
+
+          for (let i = 0; i < 5; i++) {
+              ctx.beginPath();
+              ctx.arc(200, 180, 60 + i * 10, 0, Math.PI * 2, true);
+              ctx.strokeStyle = `rgba(0, 0, 255, ${1 - i * 0.2})`;
+              ctx.lineWidth = 2;
+              ctx.stroke();
+          }
+      }
+
+      function animateSoundWaves() {
+          let radiusOffset = 0;
+          function animate() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              drawHeadphones();
+
+              for (let i = 0; i < 5; i++) {
+                  ctx.beginPath();
+                  ctx.arc(200, 180, 60 + i * 10 + radiusOffset, 0, Math.PI * 2, true);
+                  ctx.strokeStyle = `rgba(0, 0, 255, ${1 - i * 0.2})`;
+                  ctx.lineWidth = 2;
+                  ctx.stroke();
+              }
+
+              radiusOffset += 1;
+              if (radiusOffset > 10) {
+                  radiusOffset = 0;
+              }
+              requestAnimationFrame(animate);
+          }
+          animate();
+      }
+
+      drawSoundWaves();
+      animateSoundWaves();
+  </script>
+</body>
+</html>

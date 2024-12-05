@@ -1,0 +1,96 @@
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;  /* Dark background for better contrast */
+  }
+  
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #fff !important; /* White text for readability */
+  }
+  
+  .navbar .nav-link:hover {
+    color: #f1c40f !important; /* Highlight on hover for contrast */
+  }
+  
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+h1, h3 {
+  color: #333;
+  text-align: center;
+}
+
+/* Canvas Styling */
+#myCanvas {
+  border: 1px solid black;
+  display: block;
+  margin: 20px auto;
+  background-color: #e1e1e1;
+}
+
+/* Product Section */
+.product-image {
+  margin-bottom: 20px;
+}
+.product-description {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.product-description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-description ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.product-description li {
+  margin: 5px 0;
+}
+
+.btn-primary {
+  background-color: #f1c40f;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  background-color: #d4ac0d;
+}
+
+/* Reviews Section */
+.reviews {
+  text-align: center;
+  margin: 40px 0;
+}
+.reviews p {
+  font-style: italic;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 40px;
+}
