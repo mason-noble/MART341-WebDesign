@@ -1,0 +1,1 @@
+I drew all of the images that you'll see in this folder, so... technically, I don't need to credit them to anything? If you need proof, email me and I'll gladly send screenshots of the Clip Studio Paint files in my folder, or the layers in the program.
